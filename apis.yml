@@ -1,7 +1,12 @@
 aid: cdw
-url: https://raw.githubusercontent.com/api-evangelist/cdw/refs/heads/main/apis.yml
+url: 
+  https://raw.githubusercontent.com/api-evangelist/cdw/refs/heads/main/apis.yml
 modified: '2026-03-21'
 apis: []
 common:
   - type: Website
     url: https://www.cdw.com
+description: >-
+  The information technology products, expertise and service you need to make your
+  business successful.Fast shipping, fast answers, the industry's largest in-stock
+  inventories, custom configurations and more.
