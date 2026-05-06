@@ -4,141 +4,68 @@ schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main
 provider: CDW
 providerId: cdw
 created: '2026-05-04'
-modified: '2026-05-04'
+modified: '2026-05-05'
+reconciled: false
 tags:
   - B2B
   - Catalog
   - eProcurement
   - IT Distribution
   - PunchOut
-  - Technology
-description: Machine-readable plans and pricing scaffold for this API provider. Conforms to the API Commons
-  Plans schema. Tier limits and prices are scaffold defaults; replace with provider-published values.
+description: CDW provides eProcurement integration to its B2B / public-sector / education / healthcare
+  customers via the CDW Catalog API (real-time pricing + inventory) and the CDW eProcurement integration
+  surface (PunchOut / cXML / OCI / EDI / electronic invoicing). Both surfaces are integration-only —
+  no per-call API pricing is published; access is provisioned under a customer's CDW B2B account, and
+  the only invoiced item is the underlying product purchase.
+notes: API access is provisioned with the CDW customer account; there is no per-API-call price. Customer
+  pays for products purchased through the integration, not for the API itself.
+sources:
+  - https://www.cdw.com/content/cdw/en/services/eprocurement-and-custom-catalogs.html
+  - https://www.cdw.com/integrations/custompage/v2/6FB6697BBE2441968349584A24C5C459
 plans:
-  - id: cdw-free
-    name: Free
-    type: freemium
-    description: Free entry tier for the CDW API surface. Intended for evaluation, prototyping, and low-volume
-      integrations. Real limits and pricing must be reconciled with the provider's published plan documentation.
-    entries:
-      - label: API Requests
-        description: Monthly API request quota across all included endpoints
-        name: api_requests
-        type: quota
-        metric: requests
-        limit: 1000
-        timeFrame: month
-        geo: global
-        domains: []
-        unit: 1
-        price: '0.00'
-        userMultiplied: false
-      - label: Rate Limit
-        description: Maximum requests per minute on the free tier
-        name: rate_limit
-        type: rate
-        metric: requests_per_minute
-        limit: 10
-        timeFrame: minute
-        geo: global
-        domains: []
-        unit: 1
-        price: '0.00'
-        userMultiplied: false
-    elements:
-      - name: Public Documentation
-      - name: Community Support
-      - name: Sandbox Access
-      - name: CDW Catalog API
-      - name: CDW eProcurement Integration
-  - id: cdw-pro
-    name: Professional
-    type: paid
-    description: Production tier for CDW. Provides higher quotas, priority support, and access to the
-      broader API portfolio. Pricing placeholder; align with the provider's pricing page.
-    entries:
-      - label: API Requests
-        description: Monthly API request quota
-        name: api_requests
-        type: quota
-        metric: requests
-        limit: 100000
-        timeFrame: month
-        geo: global
-        domains: []
-        unit: 1
-        price: TBD
-        userMultiplied: false
-      - label: Rate Limit
-        description: Maximum requests per minute on the professional tier
-        name: rate_limit
-        type: rate
-        metric: requests_per_minute
-        limit: 100
-        timeFrame: minute
-        geo: global
-        domains: []
-        unit: 1
-        price: '0.00'
-        userMultiplied: false
-      - label: Overage
-        description: Per-request price after monthly quota is exceeded
-        name: overage
-        type: metered
-        metric: requests
-        limit: -1
-        timeFrame: month
-        geo: global
-        domains: []
-        unit: 1000
-        price: TBD
-        userMultiplied: false
-    elements:
-      - name: All Production Endpoints
-      - name: Email Support
-      - name: SLA Targets
-      - name: Webhook Subscriptions
-      - name: CDW Catalog API
-      - name: CDW eProcurement Integration
-  - id: cdw-enterprise
-    name: Enterprise
+  - id: cdw-customer-integration
+    name: CDW Customer Integration (No Direct API Fee)
     type: enterprise
-    description: Custom-negotiated tier for CDW. Includes dedicated capacity, contractual SLAs, security
-      review, data residency options, and named technical account management.
+    description: Integration surface available to CDW customers under their B2B account agreement. CDW
+      monetizes through the underlying product margin, not API access.
     entries:
-      - label: API Requests
-        description: Negotiated request volume; -1 indicates uncapped subject to fair use
-        name: api_requests
-        type: quota
-        metric: requests
+      - label: Catalog API access
+        name: catalog_api_access
+        type: subscription
+        metric: contract
         limit: -1
         timeFrame: month
-        geo: configurable
-        domains: []
+        geo: US
         unit: 1
-        price: custom
+        price: included with CDW B2B account
         userMultiplied: false
-      - label: Rate Limit
-        description: Negotiated burst and steady-state rate
-        name: rate_limit
-        type: rate
-        metric: requests_per_minute
-        limit: 1000
-        timeFrame: minute
-        geo: configurable
-        domains: []
+      - label: eProcurement integration access
+        name: eprocurement_access
+        type: subscription
+        metric: contract
+        limit: -1
+        timeFrame: month
+        geo: US
         unit: 1
-        price: custom
+        price: included with CDW B2B account
+        userMultiplied: false
+      - label: Product purchase (passthrough)
+        name: product_purchase
+        type: metered
+        metric: purchase
+        limit: -1
+        timeFrame: usage
+        geo: US
+        unit: 1
+        price: per CDW catalog price
         userMultiplied: false
     elements:
-      - name: Unlimited / Negotiated Volume
-      - name: 24/7 Dedicated Support
-      - name: Contractual SLA
-      - name: Security & Compliance Review
-      - name: Dedicated Account Manager
-      - name: Custom Data Residency
-      - name: CDW Catalog API
-      - name: CDW eProcurement Integration
+      - name: Real-time pricing + inventory
+      - name: PunchOut (cXML / OCI)
+      - name: cXML / EDI / flat-file purchase orders
+      - name: Electronic invoicing (XML / EDI)
+      - name: HTTP / SFTP / API / EDI transport
+      - name: SAP Ariba / Coupa / Oracle / Jaggaer compatibility
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
