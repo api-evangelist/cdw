@@ -61,6 +61,10 @@ common:
     url: https://www.cdw.com/content/cdw/en/services/eprocurement-and-custom-catalogs.html
   - type: Overview
     url: https://www.cdw.com/integrations/custompage/v2/6FB6697BBE2441968349584A24C5C459
+  - type: Integrations
+    url: https://www.cdw.com/integrations/
+integrations:
+  - name: CDW
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
