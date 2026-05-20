@@ -55,6 +55,10 @@ apis:
       electronic invoicing via XML or EDI. Orders can be submitted via HTTP, SFTP, API,
       and EDI connections.
 common:
+  - type: GitHubOrganization
+    url: https://github.com/cdwlabs
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/cdw
   - type: Website
     url: https://www.cdw.com
   - type: Documentation
