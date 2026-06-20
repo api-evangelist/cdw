@@ -2,7 +2,7 @@ aid: cdw
 url: https://raw.githubusercontent.com/api-evangelist/cdw/refs/heads/main/apis.yml
 name: CDW
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - B2B
   - Catalog
@@ -27,7 +27,7 @@ apis:
       - Catalog
       - Inventory
       - Pricing
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://www.cdw.com/content/cdw/en/services/eprocurement-and-custom-catalogs.html
     properties:
       - url: https://www.cdw.com/content/cdw/en/services/eprocurement-and-custom-catalogs.html
@@ -45,7 +45,7 @@ apis:
       - eProcurement
       - PunchOut
       - cXML
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://www.cdw.com/content/cdw/en/services/eprocurement-and-custom-catalogs.html
     properties:
       - url: https://www.cdw.com/content/cdw/en/services/eprocurement-and-custom-catalogs.html
