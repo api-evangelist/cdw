@@ -56,6 +56,10 @@ apis:
       electronic invoicing via XML or EDI. Orders can be submitted via HTTP, SFTP, API,
       and EDI connections.
 common:
+  - type: TrustCenter
+    url: security/cdw-trust-center.yml
+  - type: DomainSecurity
+    url: security/cdw-domain-security.yml
   - type: GitHubOrganization
     url: https://github.com/cdwlabs
   - type: LinkedIn
