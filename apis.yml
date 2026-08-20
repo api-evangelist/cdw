@@ -20,6 +20,14 @@ tags:
   - Catalog
   - eProcurement
   - IT Distribution
+  - Punchout
+  - Technology
+  - Fortune 500
+tags_raw:
+  - B2B
+  - Catalog
+  - eProcurement
+  - IT Distribution
   - PunchOut
   - Technology
   - Fortune 500
@@ -53,6 +61,11 @@ apis:
   - aid: cdw:cdw-eprocurement-api
     name: CDW eProcurement Integration
     tags:
+      - EDI
+      - eProcurement
+      - Punchout
+      - cXML
+    tags_raw:
       - EDI
       - eProcurement
       - PunchOut
