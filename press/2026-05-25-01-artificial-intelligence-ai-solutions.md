@@ -1,7 +1,9 @@
 ---
 title: Artificial Intelligence (AI) Solutions
 url: https://www.cdw.com/content/cdw/en/solutions/ai-and-data/artificial-intelligence-ai.html
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"CDW" press release artificial intelligence'
 position: 1
 source: serpapi-google

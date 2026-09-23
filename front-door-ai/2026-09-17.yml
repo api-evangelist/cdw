@@ -1,0 +1,29 @@
+# Front Door AI Index — cdw — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: cdw
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: www.cdw.com
+  final_host: www.cdw.com
+  ownership: own
+  owner: cdw
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 33
+  host_score: 33
+  density: 24.0
+  words: 1375
+  tiers:
+    agentic: 1
+    core: 32
+    model: 0
+  ambiguous: 2
+  top_terms:
+    AI: 31
+    artificial intelligence: 1
+    copilot: 1
+    intelligence: 1
+    smart: 1
